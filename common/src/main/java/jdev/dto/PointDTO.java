@@ -1,5 +1,8 @@
 package jdev.dto;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * Created by User on 029 29.09.22.
  */
@@ -9,6 +12,7 @@ public class PointDTO {
     private double lat;
     private double lon;
     private String autoId;
+    private long time;
 
     public double getLat() {
         return lat;
@@ -34,12 +38,9 @@ public class PointDTO {
         this.autoId = autoId;
     }
 
-    public String toJson() {
-        return "PointDTO{" +
-                "lat=" + lat +
-                ", lon=" + lon +
-                ", autoId='" + autoId + '\'' +
-                '}';
+    public String toJson() throws JsonProcessingException{
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(this);
     }
 
     @Override
@@ -49,5 +50,13 @@ public class PointDTO {
                 ", lon=" + lon +
                 ", autoId='" + autoId + '\'' +
                 '}';
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 }
