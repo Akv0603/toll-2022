@@ -5,21 +5,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 /**
  * Created by User on 029 29.09.22.
  */
 public class PointDTOTest {
-    private String expected = "{\"lat\":56.0,\"lon\":74.0,\"autoId\":\"o567gfd\",\"time\":1664430255804}";
+    private String expected = "{\"lat\":10.0,\"lon\":40.0,\"autoId\":\"o567gfd\",\"time\":1664430255804}";
     private String autoId = "o567gfd";
 
     @Test
     public void toJson() throws Exception{
         PointDTO point = new PointDTO();
-        point.setLat(56);
-        point.setLon(74);
+        point.setLat(10);
+        point.setLon(40);
         point.setAutoId("o567gfd");
         point.setTime(System.currentTimeMillis());
-        assertTrue(point.toJson().contains("\"lat\":56")); //проверяю lat
+        assertTrue(point.toJson().contains("\"lat\":10")); //проверяю lat
         System.out.println(point.toJson());
     }
 
@@ -30,7 +31,6 @@ public class PointDTOTest {
         //проверка autoid и time.
         assertEquals(autoId, dto.getAutoId());
         assertEquals(1664430255804L, dto.getTime());
-        System.out.println("Тест common.decodeDTO пройден");
+        System.out.println("Тест tracker-core.decodeDTO пройден");
     }
-
 }

@@ -38,6 +38,14 @@ public class PointDTO {
         this.autoId = autoId;
     }
 
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
+    }
+
     public String toJson() throws JsonProcessingException{
         ObjectMapper mapper = new ObjectMapper();
         return mapper.writeValueAsString(this);
@@ -50,13 +58,5 @@ public class PointDTO {
                 ", lon=" + lon +
                 ", autoId='" + autoId + '\'' +
                 '}';
-    }
-
-    public long getTime() {
-        return time;
-    }
-
-    public void setTime(long time) {
-        this.time = time;
     }
 }

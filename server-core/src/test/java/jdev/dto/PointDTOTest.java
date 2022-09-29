@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 /**
  * Created by User on 029 29.09.22.
  */
@@ -19,7 +20,7 @@ public class PointDTOTest {
         point.setLon(74);
         point.setAutoId("o567gfd");
         point.setTime(System.currentTimeMillis());
-        assertTrue(point.toJson().contains("\"lat\":56")); //проверяю lat
+        assertTrue(point.toJson().contains("\"lon\":74")); //проверяю lon
         System.out.println(point.toJson());
     }
 
@@ -30,7 +31,6 @@ public class PointDTOTest {
         //проверка autoid и time.
         assertEquals(autoId, dto.getAutoId());
         assertEquals(1664430255804L, dto.getTime());
-        System.out.println("Тест common.decodeDTO пройден");
+        System.out.println("Тест server-core.decodeDTO пройден");
     }
-
 }
