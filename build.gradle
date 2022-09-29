@@ -31,6 +31,10 @@ project(':server-core') {
     dependencies {
         compile project(':common')
     }
+
+    task fatJar(type: OneJar) {
+        mainClass = 'jdev.server.Main'
+    }
 }
 
 project(':tracker-core') {
@@ -47,6 +51,10 @@ project(':tracker-core') {
 project(':server-ui') {
     dependencies {
         compile project(':common')
+    }
+
+    task fatJar(type: OneJar) {
+        mainClass = 'jdev.serverUi.Main'
     }
 }
 
