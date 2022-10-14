@@ -11,8 +11,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class PointDTO {
     private double lat;
     private double lon;
+    private  double azimut;
     private String autoId;
     private long time;
+    private  double instSpeed;
 
     public double getLat() {
         return lat;
@@ -44,6 +46,22 @@ public class PointDTO {
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public double getAzimut() {
+        return azimut;
+    }
+
+    public void setAzimut(double azimut) {
+        this.azimut = azimut;
+    }
+
+    public double getInstSpeed() {
+        return instSpeed;
+    }
+
+    public void setInstSpeed(double instSpeed) {
+        this.instSpeed = instSpeed;
     }
 
     public String toJson() throws JsonProcessingException{

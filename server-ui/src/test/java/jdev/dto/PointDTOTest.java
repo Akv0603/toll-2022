@@ -10,15 +10,15 @@ import static org.junit.Assert.assertTrue;
  * Created by User on 029 29.09.22.
  */
 public class PointDTOTest {
-    private String expected = "{\"lat\":35.0,\"lon\":54.0,\"autoId\":\"o567gfd\",\"time\":1664432257169}";
-    private String autoId = "o567gfd";
+    private final String autoId = "o567gfd";
+    private String json = "{\"lat\":35.0,\"lon\":54.0,\"autoId\":\"o567gfd\",\"time\":1664432257169}";
 
     @Test
     public void toJson() throws Exception{
         PointDTO point = new PointDTO();
         point.setLat(35);
         point.setLon(54);
-        point.setAutoId("o567gfd");
+        point.setAutoId(autoId);
         point.setTime(System.currentTimeMillis());
         assertTrue(point.toJson().contains("\"lon\":54")); //проверяю lon
         System.out.println(point.toJson());
@@ -27,7 +27,7 @@ public class PointDTOTest {
     @Test
     public void decodeDTO() throws Exception{
         ObjectMapper mapper = new ObjectMapper();
-        PointDTO dto = mapper.readValue(expected, PointDTO.class);
+        PointDTO dto = mapper.readValue(json, PointDTO.class);
         //проверка autoid и time.
         assertEquals(autoId, dto.getAutoId());
         assertEquals(1664432257169L, dto.getTime());

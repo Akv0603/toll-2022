@@ -9,15 +9,15 @@ import static org.junit.Assert.assertTrue;
  * Created by User on 029 29.09.22.
  */
 public class PointDTOTest {
+    private final String autoId = "o567gfd";
     private String expected = "{\"lat\":56.0,\"lon\":74.0,\"autoId\":\"o567gfd\",\"time\":1664430255804}";
-    private String autoId = "o567gfd";
 
     @Test
     public void toJson() throws Exception{
         PointDTO point = new PointDTO();
         point.setLat(56);
         point.setLon(74);
-        point.setAutoId("o567gfd");
+        point.setAutoId(autoId);
         point.setTime(System.currentTimeMillis());
         assertTrue(point.toJson().contains("\"lat\":56")); //проверяю lat
         System.out.println(point.toJson());
