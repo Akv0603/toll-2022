@@ -6,12 +6,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Created by User on 029 29.09.22.
  */
-//точка расположения грузовика с полями координаты(долгота, широта) и госномер.
+//точка расположения грузовика с полями координаты(долгота, широта). госномер и т.п..
 
 public class PointDTO {
     private double lat;
     private double lon;
-    private  double azimut;
+    private  double azimuth;
     private String autoId;
     private long time;
     private  double instSpeed;
@@ -48,12 +48,12 @@ public class PointDTO {
         this.time = time;
     }
 
-    public double getAzimut() {
-        return azimut;
+    public double getAzimuth() {
+        return azimuth;
     }
 
-    public void setAzimut(double azimut) {
-        this.azimut = azimut;
+    public void setAzimut(double azimuth) {
+        this.azimuth = azimuth;
     }
 
     public double getInstSpeed() {
@@ -74,6 +74,8 @@ public class PointDTO {
         return "PointDTO{" +
                 "lat=" + lat +
                 ", lon=" + lon +
+                ", azimuth=" + azimuth +
+                ", instSpeed=" + instSpeed +
                 ", autoId='" + autoId + '\'' +
                 '}';
     }
