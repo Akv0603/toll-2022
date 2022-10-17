@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by Akv88 14.10.22.
+ * Created by Akv0603 14.10.22.
  */
 /*Сервис отправки координат*/
 @Service

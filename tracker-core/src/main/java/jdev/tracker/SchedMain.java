@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Created by Akv88 14.10.22.
+ * Created by Akv0603 14.10.22.
  */
 public class SchedMain {
     public static void main(String[] args) throws InterruptedException {

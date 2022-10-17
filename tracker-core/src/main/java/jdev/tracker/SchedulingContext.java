@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 /**
- * Created by Akv88 14.10.22.
+ * Created by Akv0603 14.10.22.
  * Создание контекста
  */
 @Configuration
