@@ -77,6 +77,7 @@ public class PointDTO {
                 ", azimuth=" + azimuth +
                 ", instSpeed=" + instSpeed +
                 ", autoId='" + autoId + '\'' +
+                ", time=" + time +
                 '}';
     }
 }

@@ -16,12 +16,13 @@ public class SendService {
     private static final Logger log = LoggerFactory.getLogger(SendService.class);
     private StorageService storageService = new StorageService();
     private PointDTO point;
-//каждую минуту считывает данные из storageService и отправляет куда-то
+    private SendCoordinatesService sendCoordinatesService;
+//каждую минуту считывает данные из storageService и отправляет  на сервер!
     @Scheduled(cron = "${cronSend.prop}")
     void sendGPSCoordinates() throws JsonProcessingException {
-        log.info("**********");
+        sendCoordinatesService = new SendCoordinatesService();
         while ((point = storageService.readGPSCoordinates()) != null){
-            log.info(point.toJson());
+            sendCoordinatesService.sendCoordinates(point);
         }
     }
 }
