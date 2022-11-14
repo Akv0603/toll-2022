@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Пример Spring Security</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<p>Кликните <a th:href="@{/login}">Вход</a>, для регистрации</p>
+<p>Кликните <a th:href="@{/img}">Картинки</a>, посмотреть изображения</p>
+<p>Кликните <a th:href="@{/css}">Таблицы</a>, посмотреть таблицы css</p>
+<p>Кликните <a th:href="@{/routes}">Маршруты(routes)</a>, если Ваш уровень доступа - CLIENT, MANAGER, ROOT</p>
+<p>Кликните <a th:href="@{/payments}">Расчеты</a>, если Ваш уровень доступа - "CLIENT", MANAGER, ROOT</p>
+<p>Кликните для <a th:href="@{/registerClient}">регистрации клиента</a>, если Ваш уровень доступа - MANAGER, ROOT</p>
+<p>Кликните для <a th:href="@{/registerManager}">регистрации менеджера</a>, если Ваш уровень доступа - ROOT</p>
+</body>
+</html>
