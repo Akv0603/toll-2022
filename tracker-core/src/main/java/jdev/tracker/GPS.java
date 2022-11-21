@@ -14,7 +14,7 @@ public class GPS {
         Random random = new Random();
         pointDTO.setLat(Math.ceil(random.nextDouble() * 90));//от 0 до 90 град
         pointDTO.setLon(Math.ceil(random.nextDouble() * 180));//от 0 до 180 град
-        pointDTO.setAzimut(Math.ceil(random.nextDouble() * 360));//0т 0 до 360 град
+        pointDTO.setAzimuth(Math.ceil(random.nextDouble() * 360));//0т 0 до 360 град
         pointDTO.setInstSpeed(Math.ceil(random.nextDouble() * 140));//максимальная скорость грузовика
         pointDTO.setAutoId("AKV0603");//один грузовик
         pointDTO.setTime(System.currentTimeMillis());

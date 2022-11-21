@@ -52,7 +52,7 @@ public class PointDTO {
         return azimuth;
     }
 
-    public void setAzimut(double azimuth) {
+    public void setAzimuth(double azimuth) {
         this.azimuth = azimuth;
     }
 

@@ -2,11 +2,10 @@ package jdev.tracker.services;
 
 import jdev.dto.PointDTO;
 import jdev.tracker.GPS;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by Akv0603 14.10.22.

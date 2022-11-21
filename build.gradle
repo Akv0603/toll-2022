@@ -66,6 +66,7 @@ project(':tracker-core') {
         compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.2'
         compile("org.springframework.boot:spring-boot-starter-thymeleaf")
         compile("org.springframework.boot:spring-boot-devtools")
+        compile("org.springframework.boot:spring-boot-starter")
         compile project(':common')
         testCompile("org.springframework.boot:spring-boot-starter-test")
     }

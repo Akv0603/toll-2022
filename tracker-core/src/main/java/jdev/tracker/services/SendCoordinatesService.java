@@ -16,7 +16,7 @@ public class SendCoordinatesService {
         String url = "http://localhost:8080/coords";
         restTemplate = new RestTemplate();
         //отправляем координаты POSt запросом
-        restTemplate.postForObject(url, point, PointDTO.class);
+        String coords = restTemplate.postForObject(url, point, String.class);
     }
 
 }
