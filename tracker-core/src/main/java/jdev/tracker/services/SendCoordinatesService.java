@@ -1,19 +1,22 @@
 package jdev.tracker.services;
 
+
 import jdev.dto.PointDTO;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 
 /**
  * Created by User on 007 07.11.22.
  */
+@Service
 public class SendCoordinatesService {
 
-    @Autowired
-    RestTemplate restTemplate;
+
+    private RestTemplate restTemplate;
 
     public void sendCoordinates(PointDTO point){
-        String url = "http://localhost:8080/coords";
+        String url = "http://localhost:8080/coordsDao";
         restTemplate = new RestTemplate();
         //отправляем координаты POSt запросом
         String coords = restTemplate.postForObject(url, point, String.class);

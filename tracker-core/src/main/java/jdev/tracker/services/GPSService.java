@@ -4,14 +4,17 @@ import jdev.dto.PointDTO;
 import jdev.tracker.GPS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+import dao.Coords;
+
 
 /**
  * Created by Akv0603 14.10.22.
  */
 /*Сервис получения координат*/
-@Service
+@Component
 public class GPSService {
     private static final Logger log = LoggerFactory.getLogger(GPSService.class);
 
@@ -24,5 +27,13 @@ public class GPSService {
         //получаем и записываем(отправляем) координаты в storageService(сервис хранения)
         coordinates = gps.setCoordinates();
         storageService.writeGPSCoordinates(coordinates);
+
+        Coords coords = new Coords();
+        coords.setLat(coordinates.getLat());
+        coords.setLon(coordinates.getLon());
+        coords.setAzimuth(coordinates.getAzimuth());
+        coords.setInstSpeed(coordinates.getInstSpeed());
+        coords.setTime(coordinates.getTime());
+        coords.setDeviceTracker(coordinates.getDeviceTracker());
     }
 }

@@ -3,7 +3,6 @@ package jdev.tracker;
 import jdev.dto.PointDTO;
 import junit.framework.TestCase;
 import org.junit.Test;
-
 /**
  * Created by User on 021 21.11.22.
  */

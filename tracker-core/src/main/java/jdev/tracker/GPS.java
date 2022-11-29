@@ -16,7 +16,7 @@ public class GPS {
         pointDTO.setLon(Math.ceil(random.nextDouble() * 180));//от 0 до 180 град
         pointDTO.setAzimuth(Math.ceil(random.nextDouble() * 360));//0т 0 до 360 град
         pointDTO.setInstSpeed(Math.ceil(random.nextDouble() * 140));//максимальная скорость грузовика
-        pointDTO.setAutoId("AKV0603");//один грузовик
+        pointDTO.setDeviceTracker("AKV0603");//один грузовик
         pointDTO.setTime(System.currentTimeMillis());
         return pointDTO;
     }

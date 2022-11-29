@@ -9,8 +9,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Created by Akv0603 14.10.22.
@@ -18,7 +18,9 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
  */
 @Configuration
 @EnableScheduling
-@PropertySource("classpath:/app.properties")
+@EnableJpaRepositories("dao.repo")
+@PropertySource("classpath:/application.properties")
+
 public class SchedulingContext {
     @Bean
     public GPSService gpsService(){
@@ -30,6 +32,11 @@ public class SchedulingContext {
         return new SendService();
     }
 
+    @Bean
+    public StorageService getStorage() {
+        return new StorageService();
+    }
+
     //контейнер исполняющих потоков. Возможно исполнение до 20 потоков.
     @Bean
     public TaskScheduler poolScheduler(){
@@ -38,4 +45,10 @@ public class SchedulingContext {
         scheduler.setPoolSize(20);
         return scheduler;
     }
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+
 }

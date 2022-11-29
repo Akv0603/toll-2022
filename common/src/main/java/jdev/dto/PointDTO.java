@@ -3,18 +3,16 @@ package jdev.dto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * Created by User on 029 29.09.22.
- */
+
 //точка расположения грузовика с полями координаты(долгота, широта). госномер и т.п..
 
 public class PointDTO {
     private double lat;
     private double lon;
-    private  double azimuth;
-    private String autoId;
+    private double azimuth;
+    private String deviceTracker;
     private long time;
-    private  double instSpeed;
+    private double instSpeed;
 
     public double getLat() {
         return lat;
@@ -28,17 +26,18 @@ public class PointDTO {
         return lon;
     }
 
+    public String getDeviceTracker() {
+        return deviceTracker;
+    }
+
+    public void setDeviceTracker(String deviceTracker) {
+        this.deviceTracker = deviceTracker;
+    }
+
     public void setLon(double lon) {
         this.lon = lon;
     }
 
-    public String getAutoId() {
-        return autoId;
-    }
-
-    public void setAutoId(String autoId) {
-        this.autoId = autoId;
-    }
 
     public long getTime() {
         return time;
@@ -76,7 +75,7 @@ public class PointDTO {
                 ", lon=" + lon +
                 ", azimuth=" + azimuth +
                 ", instSpeed=" + instSpeed +
-                ", autoId='" + autoId + '\'' +
+                ", deviceTracker='" + deviceTracker + '\'' +
                 ", time=" + time +
                 '}';
     }
