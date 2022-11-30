@@ -9,9 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
 
-/**
- * Created by Akv0603 14.10.22.
- */
 
 /*Сервис для хранения координат gps*/
 @Service

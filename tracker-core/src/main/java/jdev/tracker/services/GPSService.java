@@ -10,12 +10,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import dao.Coords;
-import dao.repo.CoordsRepository;
 
 
-/**
- * Created by Akv0603 14.10.22.
- */
 /*Сервис получения координат*/
 @Component
 public class GPSService {

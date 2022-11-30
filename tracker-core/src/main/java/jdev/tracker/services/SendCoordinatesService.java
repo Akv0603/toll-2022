@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 
-/**
- * Created by User on 007 07.11.22.
- */
 @Service
 public class SendCoordinatesService {
 

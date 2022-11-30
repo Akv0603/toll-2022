@@ -28,7 +28,7 @@ public class PointDTOTest {
     public void decodeDTO() throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         PointDTO dto = mapper.readValue(json, PointDTO.class);
-        //проверка autoid и time.
+        //проверка deviceTracker и time.
         assertEquals(device, dto.getDeviceTracker());
         assertEquals(1664432257169L, dto.getTime());
         System.out.println("Тест server-ui.decodeDTO пройден");

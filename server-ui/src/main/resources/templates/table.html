@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Координаты</title>
+</head>
+<body>
+
+<table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>широта</th>
+        <th>долгота</th>
+        <th>азимут</th>
+        <th>скорость</th>
+        <th>время</th>
+        <th>GPS-трекер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="coord : ${coords}">
+        <td><span th:text="${coord.id}"> id </span></td>
+        <td><span th:text="${coord.lat}"> lat </span></td>
+        <td><span th:text="${coord.lon}"> lon </span></td>
+        <td><span th:text="${coord.azimuth}"> azimuth </span></td>
+        <td><span th:text="${coord.instSpeed}"> instSpeed </span></td>
+        <td><span th:text="${coord.time}"> time </span></td>
+        <td><span th:text="${coord.deviceTracker}"> deviceTracker </span></td>
+    </tr>
+    </tbody>
+</table>
+<p>Нажмите <a th:href="@{/update}">редактирование</a>, для изменений</p>
+
+</body>
+</html>

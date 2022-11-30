@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by Akv0603 14.10.22.
- */
 /*Сервис отправки координат*/
 @Service
 public class SendService {

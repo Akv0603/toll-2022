@@ -5,7 +5,6 @@ import jdev.dto.PointDTO;
 import java.util.Random;
 
 /**
- * Created by Akv0603  14.10.22.
  *создаем класс gps, эмулирующий получение координат через gps-навигатор
  * Округляю значения для удобства чтения*/
 public class GPS {
