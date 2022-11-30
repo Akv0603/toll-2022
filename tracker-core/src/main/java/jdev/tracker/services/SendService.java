@@ -24,9 +24,8 @@ public class SendService {
 //каждую минуту считывает данные из storageService и отправляет  на сервер!
     @Scheduled(cron = "${cronSend.prop}")
     void sendGPSCoordinates() throws JsonProcessingException {
-        sendCoordinatesService = new SendCoordinatesService();
         while ((point = storageService.readGPSCoordinates()) != null){
-            //sendCoordinatesService.sendCoordinates(point);
+            sendCoordinatesService.sendCoordinates(point);
            // coordsUpdateService.updateDBCoords(point);//апдейт координат  в БД
             routeRequest.sendRouteRequest("AKV-GPS", 4);
         }

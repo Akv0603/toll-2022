@@ -7,9 +7,9 @@
 
             CREATE TABLE USERS (
                 ID integer  AUTO_INCREMENT PRIMARY KEY,
-                Имя VARCHAR(20),
-                Фамилия VARCHAR(20),
-                Услуга NUMBER
+                NAME VARCHAR(20),
+                LAST_NAME VARCHAR(20),
+                SERVICE NUMBER
                )
         </sql>
     </changeSet>

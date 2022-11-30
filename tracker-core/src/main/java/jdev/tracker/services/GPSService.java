@@ -5,9 +5,12 @@ import jdev.tracker.GPS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import dao.Coords;
+import dao.repo.CoordsRepository;
 
 
 /**
@@ -22,6 +25,7 @@ public class GPSService {
     private GPS gps = new GPS();
     private StorageService storageService = new StorageService();
 //каждую секунду собираем данные
+
     @Scheduled(cron = "${cron.prop}")
     void addGPSCoordinates() throws Exception{
         //получаем и записываем(отправляем) координаты в storageService(сервис хранения)

@@ -6,13 +6,13 @@
         <sql>
 
             CREATE TABLE COORDS (
-            id INTEGER AUTO_INCREMENT PRIMARY KEY,
-            Lat NUMBER,
-            Lon NUMBER,
-            Azimuth NUMBER,
-            Speed NUMBER,
-            DeviceTracker VARCHAR(20),
-            Time NUMBER
+            ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+            LAT NUMBER,
+            LON NUMBER,
+            AZIMUTH NUMBER,
+            SPEED NUMBER,
+            DEVICE_TRACKER VARCHAR(20),
+            TIME NUMBER
             )
         </sql>
     </changeSet>

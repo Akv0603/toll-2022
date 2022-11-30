@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class SendCoordinatesService {
 
-
     private RestTemplate restTemplate;
 
     public void sendCoordinates(PointDTO point){

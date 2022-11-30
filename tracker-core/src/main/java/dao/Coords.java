@@ -6,30 +6,30 @@ import static javax.persistence.GenerationType.AUTO;
  * Создаем сущность(таблицу GPS)
  */
 @Entity
-@Table(name = "GPS")
+@Table(name = "coords")
 public class Coords {
 
     @Id
     @GeneratedValue(strategy = AUTO)
-    @Column(name = "id")
+    @Column(name = "ID")
     int id;
 
-    @Column(name = "Lat")
+    @Column(name = "LAT")
     double lat;
 
-    @Column(name = "Lon")
+    @Column(name = "LON")
     double lon;
 
-    @Column(name = "Azimuth")
+    @Column(name = "AZIMUTH")
     double azimuth;
 
-    @Column(name = "Speed")
+    @Column(name = "SPEED")
     double instSpeed;
 
-    @Column(name = "DeviceTracker")
+    @Column(name = "DEVICE_TRACKER")
     String deviceTracker;
 
-    @Column(name = "Time")
+    @Column(name = "TIME")
     long time;
 
     public String getDeviceTracker() {

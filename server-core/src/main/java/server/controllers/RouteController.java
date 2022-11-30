@@ -35,9 +35,9 @@ public class RouteController {
         Collections.sort(coords, comparator.reversed());
         // выбираем Number- количество точек используя стрим .limit
         coords = coords.stream().limit(points.getNumber()).collect(Collectors.toList());
-        String CoordsJSON = new Gson().toJson(coords ); // Конвертируем в json
+        String coordsJSON = new Gson().toJson(coords ); // Конвертируем в json
 
-        return CoordsJSON;
+        return coordsJSON;
     }
 
 }

@@ -18,7 +18,7 @@ import server.repo.UsersRepository;
 @RestController
 public class CoordsControllers {
     private static final Logger log = LoggerFactory.getLogger(CoordsControllers.class);
-    private Coords DataBase;
+    private Coords dataBase;
     @Autowired
     private CoordsRepository coordsRepository;
 
@@ -65,14 +65,14 @@ public class CoordsControllers {
         fileCoords.close();
 
         //А теперь записать в базу данных
-        DataBase = new Coords();
-        DataBase.setLat(coords.getLat());
-        DataBase.setLon(coords.getLon());
-        DataBase.setAzimuth(coords.getAzimuth());
-        DataBase.setInstSpeed(coords.getInstSpeed());
-        DataBase.setTime(coords.getTime());
-        DataBase.setDeviceTracker(coords.getDeviceTracker());
-        coordsRepository.save(DataBase);
+        dataBase = new Coords();
+        dataBase.setLat(coords.getLat());
+        dataBase.setLon(coords.getLon());
+        dataBase.setAzimuth(coords.getAzimuth());
+        dataBase.setInstSpeed(coords.getInstSpeed());
+        dataBase.setTime(coords.getTime());
+        dataBase.setDeviceTracker(coords.getDeviceTracker());
+        coordsRepository.save(dataBase);
         return CoordsInfo;
     }
 

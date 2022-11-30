@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
-//точка расположения грузовика с полями координаты(долгота, широта). госномер и т.п..
+//точка расположения грузовика с полями координаты(долгота, широта). и т.п..
 
 public class PointDTO {
     private double lat;

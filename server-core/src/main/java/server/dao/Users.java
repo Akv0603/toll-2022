@@ -13,13 +13,13 @@ public class Users {
     @Column(name = "ID")
     int id;
 
-    @Column(name = "Имя")
+    @Column(name = "NAME")
     String firstName;
 
-    @Column(name = "Фамилия")
+    @Column(name = "LAST_NAME")
     String lastName;
 
-    @Column(name = "Услуга")
+    @Column(name = "SERVICE")
     int service;
 
     public int getId() {

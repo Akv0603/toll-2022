@@ -12,15 +12,15 @@ public class RouteRequest {
     RequestDTO request = new RequestDTO();
     private RestTemplate restTemplate;
     public void sendRouteRequest(String device, int lastNumbers) {
-        // Запрос маршрута с устройства(device) по последним точкам отслеживания(lastNumbers)
+//запрос последних точек с трекера
         request.setDeviceTracker(device);
         request.setNumber(lastNumbers);
 
         String url = "http://localhost:8080/points";
         restTemplate = new RestTemplate();
-        // запрашиваем маршут POST-запросом
+        //POST запрос
         String route = restTemplate.postForObject(url, request, String.class);
 
-        log.info(route); //выводим результат
+        log.info(route); //выводим в json
     }
 }

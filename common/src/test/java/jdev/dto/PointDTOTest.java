@@ -5,9 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-/**
- * Created by User on 029 29.09.22.
- */
+
 public class PointDTOTest {
     private final String device = "o567gfd";
     private String expected = "{\"lat\":56.0,\"lon\":74.0,\"deviceTracker\":\"o567gfd\",\"time\":1664430255804}";
@@ -27,7 +25,7 @@ public class PointDTOTest {
     public void decodeDTO() throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         PointDTO dto = mapper.readValue(expected, PointDTO.class);
-        //проверка autoid и time.
+        //проверка devicetracker и time.
         assertEquals(device, dto.getDeviceTracker());
         assertEquals(1664430255804L, dto.getTime());
         System.out.println("Тест common.decodeDTO пройден");
