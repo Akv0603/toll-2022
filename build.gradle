@@ -118,3 +118,7 @@ project(':tracker-ui') {
     //    mainClass = 'jdev.trackerUi.Main'
     //}
 }
+
+project(':thread-examples'){
+    apply plugin: 'java'
+}
